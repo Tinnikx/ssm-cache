@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
-       xmlns:tx="http://www.springframework.org/schema/cache"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd">
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
     <context:component-scan base-package="com.ssm.cache.service"/>
     <context:component-scan base-package="com.ssm.cache.config"/>
-    <tx:annotation-driven/>
+    <import resource="cache.xml"/>
+
+<!--    <bean id="config" class="org.springframework.beans.factory.config.PropertiesFactoryBean">-->
+<!--        <property name="locations">-->
+<!--            <list>-->
+<!--                <value>classpath*:config.properties</value>-->
+<!--            </list>-->
+<!--        </property>-->
+<!--        <property name="fileEncoding" value="utf-8" />-->
+<!--    </bean>-->
+    <context:property-placeholder location="classpath*:config.properties"/>
 </beans>

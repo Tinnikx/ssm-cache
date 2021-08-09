@@ -16,4 +16,9 @@ public class TestController {
     public String test(String id) {
         return testService.test(id);
     }
+
+    @GetMapping(value = "/test2")
+    public String test2() {
+        return testService.test2();
+    }
 }

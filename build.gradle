@@ -36,6 +36,11 @@ dependencies {
     compile group: 'com.fasterxml.jackson.module', name: 'jackson-module-parameter-names', version: '2.10.0'
 
     implementation group: 'com.github.ben-manes.caffeine', name: 'caffeine', version: '3.0.3'
+    implementation group: 'org.springframework.data', name: 'spring-data-redis', version: '2.5.3'
+    //redis连接工具, 也可以使用Jedis
+    implementation group: 'io.lettuce', name: 'lettuce-core', version: '6.1.4.RELEASE'
+    //连接池相关包GenericObjectPoolConfig
+    implementation group: 'org.apache.commons', name: 'commons-pool2', version: '2.10.0'
 }
 
 test {

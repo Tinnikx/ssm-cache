@@ -10,4 +10,8 @@ public class TestService {
     public String test(String id) {
         return id;
     }
+
+    public String test2() {
+        return "success";
+    }
 }
